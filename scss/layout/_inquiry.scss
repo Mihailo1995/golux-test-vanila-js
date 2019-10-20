@@ -1,0 +1,306 @@
+.inquiry {
+    width: 100%;
+    background-color: #f0f0f0;
+    @include flexCenter;
+    flex-direction: column;
+
+    @include respond(768) {
+        background-image: url("../resources/images/bg-phone.png");
+        background-size: cover;
+    }
+
+    &__div-1 {
+        width: 60%;
+        padding: 4rem;
+        border-bottom: 1px solid $color-trolley-gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(768) {
+            width: 100%;
+            padding: 4rem 0 2rem;
+            border: none;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: $color-jet;
+            @include respond(768) {
+                margin-bottom: 4rem;
+            }
+        }
+
+        .book-btn {
+            width: 24rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            background-color: $color-pink;
+            color: $color-white;
+            font-size: 2rem;
+            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+            text-transform: uppercase;
+
+            &::before {
+                margin-right: 3rem;
+                display: inline-block;
+                content: "";
+                width: 2.4rem;
+                height: 1.6rem;
+                background-image: url("../resources/icons/arrow-up.svg");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    &__h3 {
+        margin: 5rem 0;
+        font-size: 2rem;
+        font-family: "ProximaNova-Extrabold", sans-serif;
+        color: $color-jet;
+        text-transform: uppercase;
+
+        @include respond(768) {
+            width: 80%;
+            margin: 3rem 0 4rem;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+
+    &__form {
+        width: 62rem;
+
+        @include respond(768) {
+            width: 90%;
+            @include flexCenter;
+            flex-direction: column;
+        }
+
+        .shell-1 {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            @include flexCenter;
+
+            @include respond(768) {
+                flex-direction: column;
+            }
+
+            .inputs-div {
+                width: 30rem;
+                height: 20rem;
+                margin-right: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                @include respond(768) {
+                    width: 60%;
+                    margin: 0;
+                }
+
+                @include respond(480) {
+                    width: 90%;
+                }
+
+                input {
+                    width: 100%;
+                    height: 5rem;
+                    padding: 1rem 1.5rem;
+                    border: none;
+                    border-bottom: 1px solid $color-trolley-gray;
+                    background-color: transparent;
+                    color: $color-trolley-gray;
+                    font-family: "AvenirNextLTPro-Regular", sans-serif;
+                    font-size: 1.4rem;
+                    outline: none;
+
+                    &:focus {
+                        border-bottom: 2px solid #666;
+                    }
+                }
+            }
+
+            textarea {
+                width: 30rem;
+                height: 20rem;
+                padding: 1rem 1.5rem;
+                border: none;
+                border-bottom: 1px solid $color-trolley-gray;
+                background-color: transparent;
+                color: $color-trolley-gray;
+                font-size: 1.4rem;
+                font-family: "AvenirNextLTPro-Regular", sans-serif;
+                outline: none;
+
+                &:focus {
+                    border-bottom: 2px solid #666;
+                }
+
+                @include respond(768) {
+                    width: 60%;
+                    margin: 5rem 0 3rem;
+                }
+
+                @include respond(480) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .shell-2 {
+            width: 100%;
+            padding: 1.5rem;
+            border-bottom: 1px solid $color-trolley-gray;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            @include respond(768) {
+                width: 60%;
+                margin: 5rem 0 3rem;
+            }
+
+            @include respond(480) {
+                width: 90%;
+            }
+
+            input[type="checkbox"] {
+                width: 0;
+                height: 0;
+                position: absolute;
+                opacity: 0;
+            }
+
+            .c-box-label {
+                color: $color-trolley-gray;
+                font-family: 'AvenirNextLTPro-Regular', sans-serif;
+                font-size: 1.4rem;
+                user-select: none;
+                position: relative;
+                left: 3.6rem;
+            }
+
+            .c-box-label::before,
+            .c-box-label::after {
+                content: "";
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .c-box-label::before {
+                border: 2px solid $color-ash-gray;
+                border-radius: 3px;
+                left: -4rem;
+            }
+            .c-box-label::after {
+                width: 2.4rem;
+                background: url("../resources/icons/true-check.svg")
+                    no-repeat center center;
+                display: none;
+                top: 0.3rem;
+                left: -3.7rem;
+            }
+
+            input[type="checkbox"]:checked + label::after {
+                display: block;
+            }
+        }
+    }
+
+    .methods-services-div {
+        width: 74rem;
+        margin-top: 10rem;
+
+        @include respond(768) {
+            width: 90%;
+            margin-top: 4rem;
+        }
+
+        .helper-div {
+            display: flex;
+            justify-content: space-between;
+
+            @include respond(768) {
+                @include flexCenter;
+                flex-direction: column;
+            }
+        }
+
+        h3 {
+            margin: 3rem 0 3.2rem;
+        }
+
+        .group {
+            @include flexCenter;
+            flex-direction: column;
+        }
+
+        img {
+            height: 11rem;
+        }
+
+        h4 {
+            width: 12rem;
+            margin: 1rem 0 3.5rem;
+            color: $color-trolley-gray;
+            font-size: 1.5rem;
+            font-family: 'AvenirNextLTPro-Regular', sans-serif;
+            text-align: center;
+        }
+
+        .methods {
+            @include respond(768) {
+                display: flex;
+            }
+
+            .group:first-of-type {
+                @include respond(768) {
+                    margin-right: 5rem;
+                }
+            }
+
+            .group img {
+                @include respond(768) {
+                    height: 14rem;
+                }
+            }
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 11rem);
+            grid-column-gap: 7rem;
+
+            @include respond(768) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 2rem;
+            }
+        }
+
+        .send-btn {
+            width: 100%;
+            margin: 3rem 0 11rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            background-color: $color-pink;
+            color: $color-white;
+            font-size: 1.5rem;
+            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+            text-transform: uppercase;
+
+            @include respond(480) {
+                height: 8rem;
+                margin-bottom: 0;
+                border-radius: 0;
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,68 @@
+.join {
+    width: 100%;
+    padding: 7rem 0 5rem;
+    background-image: url("../resources/images/bg-join.png");
+    background-size: cover;
+    background-position: center;
+    @include flexCenter;
+
+    @include respond(768) {
+        flex-direction: column;
+    }
+
+    img {
+        width: 34rem;
+        margin-right: 8rem;
+
+        @include respond(768) {
+            width: 28rem;
+            margin: 0 0 6rem;
+        }
+
+        @include respond(480) {
+            width: 80%;
+        }
+    }
+
+    div {
+        color: $color-white;
+
+        @include respond(480) {
+            @include flexCenter;
+            flex-direction: column;
+        }
+
+        p {
+            width: 21rem;
+            margin-bottom: 4rem;
+            font-size: 2.2rem;
+            font-weight: 100;
+            line-height: 1.5;
+
+            span {
+                font-family: 'AvenirNextLTPro-Bold', sans-serif;
+            }
+
+            @include respond(480) {
+                width: 80%;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 4rem;
+            border-radius: 0.5rem;
+            background-color: $color-pink;
+            color: $color-white;
+            font-size: 1.5rem;
+            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+            text-transform: uppercase;
+
+            @include respond(480) {
+                width: 90%;
+                height: 6rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.we-are {
+    padding: 10rem 0;
+
+    @include respond(768) {
+        padding: 6rem 0 4rem;
+    }
+
+    &__div-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 20rem;
+            margin-left: 2rem;
+        }
+    }
+
+    &__div-2 {
+        margin-top: 8rem;
+        @include flexCenter;
+
+        @include respond(768) {
+            margin-top: 5rem;
+            flex-direction: column;
+        }
+
+        p {
+            width: 36rem;
+            margin-right: 7rem;
+            color: $color-trolley-gray;
+            font-size: 1.7rem;
+            line-height: 2;
+
+            @include respond(768) {
+                width: 100%;
+                margin-right: 0;
+                padding: 2rem 2rem 0;
+                order: 2;
+            }
+        }
+
+        .rectangle {
+            width: 46rem;
+            height: 24rem;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 5rem;
+            }
+
+            @include respond(768) {
+                order: 1;
+            }
+
+            @include respond(480) {
+                width: 100%;
+            }
+        }
+    }
+}

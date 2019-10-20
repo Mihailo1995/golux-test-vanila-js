@@ -1,0 +1,61 @@
+$color-blue: #144077;
+$color-light-blue: #6cb2d1;
+$color-pink: #d21553;
+$color-green: #00ffa3;
+$color-white: #fff;
+$color-trolley-gray: #7f7f7f;
+$color-jet: #333;
+$color-ash-gray: #b2b2b2;
+
+$box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == 320 {
+        @media only screen and (max-width: 20em) { @content };    //320px / 16 = 20em
+    }
+    @if $breakpoint == 480 {
+        @media only screen and (max-width: 30em) { @content };    //480px / 16 = 30em
+    }
+    @if $breakpoint == 768 {
+        @media only screen and (max-width: 48em) { @content };   //768px / 16 = 48em
+    }
+    @if $breakpoint == 1200 {
+        @media only screen and (max-width: 75em) { @content };      //1200px / 16 = 75em
+    }
+    @if $breakpoint == 1320 {
+        @media only screen and (max-width: 82.5em) { @content };      //1320px / 16 = 82.5em
+    }
+    @if $breakpoint == 1800 {
+        @media only screen and (min-width: 112.5em) { @content };   //1800px / 16 = 112.5em
+    }
+}
+
+@font-face {
+    font-family: 'ProximaNovaScOsf-Extrabold';
+    src: local('../resources/fonts/ProximaNovaScOsf-Extrabold.otf'), url('../resources/fonts/ProximaNovaScOsf-Extrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNova-Extrabold';
+    src: local('../resources/fonts/ProximaNova-Extrabold.otf'), url('../resources/fonts/ProximaNova-Extrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: local('../resources/fonts/AvenirNextLTPro-Regular.otf'), url('../resources/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Bold';
+    src: local('../resources/fonts/AvenirNextLTPro-Bold.otf'), url('../resources/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}

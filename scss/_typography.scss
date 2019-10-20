@@ -1,0 +1,32 @@
+html {
+    /* font-size: 10px; this is the root font-size, defined in html, 
+	now 1rem = 10px, not 16px by default */
+    font-size: 62.5%; /* 10px/16px = 0.625 */
+    
+    @include respond(1800) {        // maxW <= 1800px ?
+        font-size: 75%;             // 1rem = 12px, 12/16 = 75%
+    }
+    @include respond(768) {         // maxW <= 900px ?
+        font-size: 50%;             // 1rem = 8px, 8/16 = 50%
+    }
+
+}
+
+body {
+    font-family: 'AvenirNextLTPro-Regular', sans-serif;
+}
+
+.h2-universal {
+    font-size: 3.6rem;
+    font-family: 'ProximaNova-Extrabold', sans-serif;
+    color: $color-blue;
+    text-align: center;
+}
+
+.h3-universal {
+    font-size: 2.2rem;
+    font-family: 'ProximaNova-Extrabold', sans-serif;
+    color: $color-ash-gray;
+    text-align: center;
+    text-transform: uppercase;
+}

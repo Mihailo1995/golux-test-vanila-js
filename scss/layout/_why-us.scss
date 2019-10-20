@@ -1,0 +1,54 @@
+.why-us {
+    width: 100%;
+    padding: 6.5rem 0 8.5rem;
+    background-image: url("../resources/images/bg-why-us.png");
+    background-size: cover;
+    color: $color-white;
+    @include flexCenter;
+    flex-direction: column;
+
+    h1 {
+        font-size: 5.2rem;
+        font-family: 'ProximaNova-Extrabold', sans-serif;
+    }
+
+    p {
+        width: 44rem;
+        margin: 4rem 0;
+        font-size: 3.3rem;
+        font-family: 'AvenirNextLTPro-Regular', sans-serif;
+        text-align: center;
+        line-height: 1.3;
+
+        @include respond(480) {
+            width: 80%;
+        }
+    }
+
+    a {
+        color: $color-white;
+        font-size: 1.8rem;
+        font-family: 'AvenirNextLTPro-Bold', sans-serif;
+        position: relative;
+        z-index: 5;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $color-green;
+            height: 1rem;
+            width: 7.8rem;
+            position: absolute;
+            left: 1.2rem;
+            top: 1.1rem;
+            z-index: -1;
+            @include transition-ease;
+        }
+
+        &:hover {
+            &::after {
+                left: -1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.header {
+    width: 100%;
+    padding: 2.5rem 3rem 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(768) {
+
+    }
+
+    &__golux-logo {
+        width: 14rem;
+    }
+
+    &__nav {
+        & * {
+            cursor: pointer;
+        }
+
+        .quote-btn {
+            width: 14rem;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            background-color: $color-white;
+            color: $color-pink;
+            font-size: 1.6rem;
+            font-family: 'ProximaNovaScOsf-Extrabold', sans-serif;
+            text-transform: uppercase;
+
+            @include respond(480) {
+                display: none;
+            }
+        }
+
+        .user-btn {
+            height: 3rem;
+            margin: 0 3rem;
+            position: relative;
+            top: 1rem;
+            fill: #999;
+
+            &:hover {
+                fill: #027cb2;
+            }
+        }
+
+        .menu-btn {
+            height: 2.5rem;
+            position: relative;
+            top: 0.8rem;
+        }
+    }
+}
